@@ -1,0 +1,46 @@
+/* Green badge: checkmark icon, top-right of card (always visible) */
+.siwt-badge {
+  position: absolute !important;
+  top: 6px !important;
+  right: 6px !important;
+  width: 26px !important;
+  height: 26px !important;
+  border-radius: 50% !important;
+  background: rgba(34, 197, 94, 0.85) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 99999 !important;
+  pointer-events: none !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35) !important;
+  opacity: 0.95 !important;
+}
+
+.siwt-badge svg {
+  width: 16px !important;
+  height: 16px !important;
+  fill: none !important;
+  stroke: #fff !important;
+  stroke-width: 2.5 !important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+}
+
+/* Permanent score bar at the bottom of the card */
+.siwt-score-bar {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  background: rgba(0, 0, 0, 0.75) !important;
+  color: #22c55e !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  text-align: center !important;
+  padding: 4px 6px !important;
+  z-index: 99999 !important;
+  pointer-events: none !important;
+  letter-spacing: 0.3px !important;
+  border-radius: 0 0 4px 4px !important;
+}

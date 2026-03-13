@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 320px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #1a1a2e;
+  color: #e0e0e0;
+}
+
+.container {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #fff;
+  text-align: center;
+}
+
+.field {
+  margin-bottom: 14px;
+}
+
+label {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #aaa;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  background: #16213e;
+  color: #fff;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus {
+  border-color: #22c55e;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: #22c55e;
+  cursor: pointer;
+}
+
+label span {
+  color: #22c55e;
+  font-weight: 700;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn.primary {
+  width: 100%;
+  background: #22c55e;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: #16a34a;
+}
+
+.btn.test {
+  width: 100%;
+  margin-top: 8px;
+  background: #1e3a5f;
+  color: #7bb3e0;
+}
+
+.btn.test:hover {
+  background: #254a73;
+}
+
+.test-result {
+  margin-top: 8px;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-family: monospace;
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+
+.test-result.pass {
+  background: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+}
+
+.test-result.fail {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+}
+
+.btn.secondary {
+  background: #333;
+  color: #ccc;
+  font-size: 12px;
+  padding: 6px 12px;
+}
+
+.btn.secondary:hover {
+  background: #444;
+}
+
+.divider {
+  height: 1px;
+  background: #333;
+  margin: 16px 0;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #888;
+}
+
+.status {
+  margin-top: 12px;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.status.success {
+  background: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+}
+
+.status.error {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+}
