@@ -67,6 +67,14 @@
    * Inject badge (top-right checkmark) + permanent score bar (bottom) on a card.
    * One badge per card element. Also checks ancestors to avoid duplicates in popups.
    */
+  function isTopRated(imdbRating, rtScore) {
+    const imdbNum = parseFloat(imdbRating);
+    const hasHighImdb = !isNaN(imdbNum) && imdbNum >= 8.6;
+    const hasHighRt = rtScore != null && rtScore >= 86;
+    // Top rated if any available rating is high
+    return hasHighImdb || hasHighRt;
+  }
+
   function injectBadge(card, imdbRating, rtScore, title) {
     if (!card || !document.contains(card)) return;
 
@@ -89,15 +97,17 @@
       card.style.position = 'relative';
     }
 
+    const topRated = isTopRated(imdbRating, rtScore);
+
     // --- Green badge (top-right) ---
     const badge = document.createElement('div');
-    badge.className = 'siwt-badge';
+    badge.className = 'siwt-badge' + (topRated ? ' siwt-badge-top' : '');
     badge.innerHTML = '<svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>';
     card.appendChild(badge);
 
     // --- Permanent score bar (bottom) ---
     const scoreBar = document.createElement('div');
-    scoreBar.className = 'siwt-score-bar';
+    scoreBar.className = 'siwt-score-bar' + (topRated ? ' siwt-score-bar-top' : '');
     scoreBar.setAttribute('data-siwt-title', title || '');
 
     const imdbText = `IMDB ${imdbRating}`;
