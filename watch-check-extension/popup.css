@@ -51,6 +51,19 @@ input[type="text"]:focus {
   border-color: #22c55e;
 }
 
+.helper-link {
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 11px;
+  color: #7bb3e0;
+  text-decoration: none;
+}
+
+.helper-link:hover {
+  text-decoration: underline;
+  color: #9dcbf0;
+}
+
 input[type="range"] {
   width: 100%;
   accent-color: #22c55e;
