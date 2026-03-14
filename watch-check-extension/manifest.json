@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Should I Watch This?",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Overlays a green checkmark badge on movie/show cards that meet your IMDB and Rotten Tomatoes thresholds.",
   "permissions": ["storage"],
   "host_permissions": ["https://www.omdbapi.com/*"],
